@@ -21,16 +21,41 @@ function pali(input){
 
 // scegli 'pari' o 'dispari' digitandolo, assegno a var
 
+var pariDisUser = prompt('scegli "pari" o "dipari"'); 
+
 //digita numero da 1 a 5, lo assegno a var
+
+var numUser = prompt('digita un numero da 1 a 5'); 
 
 //genero numero random da 1 a 5, per computer (function)
 
+function random5(){
+    return Math.floor(Math.random() * 5) +1;
+} 
+
+var numPc = random5(); //assegno a var numPc il numero random della funzione
+
 //sommo i due numeri
+
+var somma = numUser + numPc;
 
 //stabilisco se la somma è pari o dispari (function)
 
+function pariDis(x){
+    if (x % 2 == 0){
+        return 'pari'
+    } else {
+        return 'dispari'
+    }
+}
+
 //dichiaro chi ha vinto
 
+if (pariDis(somma) == pariDisUser){
+    console.log('Hai vinto');
+} else {
+    console.log('Ha vinto il computer');
+}
 
 
 
