@@ -1,7 +1,7 @@
 // Palidroma Chiedere all’utente di inserire una parola. Creare una funzione per capire se la parola inserita è palindroma
 
 //
-var risultato = pali(prompt('inserisci una parola'));
+var risultato = pali(prompt('inserisci una parola').toLowerCase()); //trasformata tutta in minuscolo
 document.getElementById('risultatoPali').innerHTML = risultato;
 
 // * funzione calcolo parola palindroma
@@ -22,12 +22,12 @@ function pali(input){
 // scegli 'pari' o 'dispari' digitandolo, assegno a var
 
 var pariDisUser = prompt('scegli "pari" o "dipari"');  
-console.log(pariDisUser);
+document.getElementById('pariDisUser').innerHTML += pariDisUser;
 
 //digita numero da 1 a 5, lo assegno a var
 
 var numUser = parseInt(prompt('digita un numero da 1 a 5')); 
-console.log(numUser);
+document.getElementById('numUser').innerHTML += numUser;
 
 //genero numero random da 1 a 5, per computer (function)
 
@@ -36,7 +36,7 @@ function random5(){
 } 
 
 var numPc = random5(); //assegno a var numPc il numero random della funzione
-console.log(numPc);
+document.getElementById('numPc').innerHTML += numPc;
 
 //sommo i due numeri
 
@@ -56,11 +56,15 @@ function pariDis(x){
 //dichiaro chi ha vinto
 
 if (pariDis(somma) == pariDisUser){
-    console.log(pariDis);
-    console.log('Hai vinto');
+    document.getElementById('risultatoNumeri').innerHTML = 'Hai vinto';
 } else {
-    console.log('Ha vinto il computer');
+    document.getElementById('risultatoNumeri').innerHTML = 'Hai perso';
 }
 
+//al click fa tuto il sotto
+// elabora.addEventListener("click", function(){
+    
+//     // prende dati da form
+//     var nome = document.getElementById("nomeIn").value;
 
 
