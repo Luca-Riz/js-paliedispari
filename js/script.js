@@ -19,46 +19,46 @@ function pali(input){
 // * fine funzione calcolo parola palindroma
 
 
-// // Pari e Dispari L’utente sceglie pari o dispari e inserisce un numero da 1 a 5. Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione). Sommiamo i due numeri. Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione) Dichiariamo chi ha vinto.
+// Pari e Dispari L’utente sceglie pari o dispari e inserisce un numero da 1 a 5. Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione). Sommiamo i due numeri. Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione) Dichiariamo chi ha vinto.
 
-// // scegli 'pari' o 'dispari' digitandolo, assegno a var
+// scegli 'pari' o 'dispari' digitandolo, assegno a var
 
-// var pariDisUser = prompt('scegli "pari" o "dipari"');  
-// document.getElementById('pariDisUser').innerHTML += pariDisUser;
+var pariDisUser = prompt('scegli "pari" o "dipari"');  
+document.getElementById('pariDisUser').innerHTML += pariDisUser;
 
-// //digita numero da 1 a 5, lo assegno a var
+//digita numero da 1 a 5, lo assegno a var
 
-// var numUser = parseInt(prompt('digita un numero da 1 a 5')); 
-// document.getElementById('numUser').innerHTML += numUser;
+var numUser = parseInt(prompt('digita un numero da 1 a 5')); 
+document.getElementById('numUser').innerHTML += numUser;
 
-// //genero numero random da 1 a 5, per computer (function)
+//genero numero random da 1 a 5, per computer (function)
 
-// function random5(){
-//     return Math.floor(Math.random() * 5) +1;
-// } 
+function random5(){
+    return Math.floor(Math.random() * 5) +1;
+} 
 
-// var numPc = random5(); //assegno a var numPc il numero random della funzione
-// document.getElementById('numPc').innerHTML += numPc;
+var numPc = random5(); //assegno a var numPc il numero random della funzione
+document.getElementById('numPc').innerHTML += numPc;
 
-// //sommo i due numeri
+//sommo i due numeri
 
-// var somma = numUser + numPc;
-// console.log(somma);
+var somma = numUser + numPc;
+console.log(somma);
 
-// //stabilisco se la somma è pari o dispari (function)
+//stabilisco se la somma è pari o dispari (function)
 
-// function pariDis(x){
-//     if (x % 2 == 0){
-//         return 'pari'
-//     } else {
-//         return 'dispari'
-//     }
-// }
+function pariDis(x){
+    if (x % 2 == 0){
+        return 'pari'
+    } else {
+        return 'dispari'
+    }
+}
 
-// //dichiaro chi ha vinto
+//dichiaro chi ha vinto
 
-// if (pariDis(somma) == pariDisUser){
-//     document.getElementById('risultatoNumeri').innerHTML = 'Hai vinto';
-// } else {
-//     document.getElementById('risultatoNumeri').innerHTML = 'Hai perso';
-// }
+if (pariDis(somma) == pariDisUser){
+    document.getElementById('risultatoNumeri').innerHTML = 'Hai vinto';
+} else {
+    document.getElementById('risultatoNumeri').innerHTML = 'Hai perso';
+}
