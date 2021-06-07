@@ -1,20 +1,20 @@
 // Palidroma Chiedere all’utente di inserire una parola. Creare una funzione per capire se la parola inserita è palindroma
 
-var input = prompt('inserisci una parola');
+var risultato = pali(prompt('inserisci una parola'));
+document.getElementById('risultato').innerHTML = risultato;
 
-// var controllo = pali(input);
-
-// *provo a funzionare la funzione
-lengthDiv2 = input.length/2;
-// console.log(lengthDiv2);
-for(var i=0; i<lengthDiv2; i++){
-    console.log(input[i]);
-    console.log(input[input.length-1-i]);
+// * funzione calcolo parola palindroma
+function pali(input){
+    var lengthDiv2 = input.length/2; //calcolo la metà della lunghezza della parola
+        for(var i=0; i<lengthDiv2; i++){
+        if (input[i] != input[input.length-1-i]){
+            return 'La parola non è palindroma';
+        } else {
+            return 'Parola palindroma';
+        }  
+    }    
 }
-
-
-
-
+// * fine funzione calcolo parola palindroma
 
 
 // Pari e Dispari L’utente sceglie pari o dispari e inserisce un numero da 1 a 5. Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione). Sommiamo i due numeri. Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione) Dichiariamo chi ha vinto.
