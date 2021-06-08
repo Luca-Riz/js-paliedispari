@@ -33,11 +33,11 @@ document.getElementById('numUser').innerHTML += numUser;
 
 //genero numero random da 1 a 5, per computer (function)
 
-function random5(){
-    return Math.floor(Math.random() * 5) +1;
+function random(max){
+    return Math.floor(Math.random() * max) +1;
 } 
 
-var numPc = random5(); //assegno a var numPc il numero random della funzione
+var numPc = random(5); //assegno a var numPc il numero random della funzione
 document.getElementById('numPc').innerHTML += numPc;
 
 //sommo i due numeri
